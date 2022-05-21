@@ -3,7 +3,7 @@ version: '3'
 services:
     laravel.app:
         build:
-            context: ./
+            context: ./docker
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
