@@ -32,7 +32,8 @@ services:
             MYSQL_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         volumes:
-            - 'sailmysql:/var/lib/mysql'
+            - ./docker/data/mysql:/var/lib/mysql
+            - ./docker/db/mysql/conf:/etc/mysql/conf.d
         networks:
             - sail
         healthcheck:
